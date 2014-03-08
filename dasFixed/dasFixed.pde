@@ -4,6 +4,23 @@ HScrollbar hs1;
 //int numYears = 10;
 //Year[] years = new Year[numYears];
 Year[] years = {
+  new Year(1889,27,590),
+  new Year(1890,19,607),
+  new Year(1891,21,656),
+  new Year(1892,39,725),
+  new Year(1893,38,744),
+  new Year(1894,53,763),
+  new Year(1895,49,771),
+  new Year(1896,63,791),
+  new Year(1897,64,794),
+  new Year(1898,45,799),
+  new Year(1899,48,801),
+  new Year(1900,40,851),
+  new Year(1901,44,880),
+  new Year(1902,59,992),
+  new Year(1903,23,865),
+  new Year(1904,23,829),
+  new Year(1905,23,651),
   new Year(1942, 59, 3055), 
   new Year(2000, 1768, 4300), 
   new Year(2001, 1755, 4258), 
