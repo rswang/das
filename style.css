@@ -293,11 +293,11 @@ header {
 .main section.page3 {
   background: #ffffff;
 }
-.main section.page3 .page_container {
+/*.main section.page3 .page_container {
   overflow: hidden;
   width: 500px;
   right: -285px;
-}
+}*/
 .main section.page3 h1 {
   text-align: left;
   padding: 0;
