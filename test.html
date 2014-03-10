@@ -4,6 +4,96 @@
   		<script src="processing-1.4.1.min.js"></script>
 	</head>
 	<body> 
-		<canvas data-processing-sources="anything.pde"></canvas></canvas>
+		<canvas data-processing-sources="dasFixed/dasFixed.pde"></canvas></canvas>
 	</body>
+</html>
+
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DAS</title>
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+
+  <link rel="shortcut icon" id="favicon" href="favicon.png"> 
+  <script src="processing-1.4.1.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="assets/scroll/jquery.onepage-scroll.js"></script>
+  <script type="text/javascript" src="assets/scroll/jquery.onepage-scroll.min.js"></script>
+  <link href='assets/scroll/onepage-scroll.css' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <script>
+    $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 600
+      });
+    });
+    
+  </script>
+
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      
+      <section class="page1">
+        <div class="page_container">
+<!--           <div class="container">
+          <h1>Gender at MIT</h1>
+          <h2>A representation of gender diversity at MIT through data over the years and what people are saying</h2>
+          </div> -->
+        </div>
+<!--         <img src="images/bg1.jpg" alt="phones"> -->
+      </section>
+      
+      <section class="page2">
+        <div class="page_container">
+          <h1>Brief Summary</h1>
+          <h2>Why this matters and why we chose to do gender representation at MIT...</h2>
+        </div>
+      </section>
+
+      <section class="page3">
+        <div class="page_container">
+          <canvas data-processing-sources="dasFixed/dasFixed.js"></canvas></canvas>
+          <h1>Data Representation</h1>
+          <h2>Graphs and stuff</h2>
+
+        </div>
+      </section>
+      
+      <section class="page4">
+        <div class="page_container">
+          <!-- <h1>Quotes</h1> -->
+          <canvas data-processing-sources="quotes/quotes.pde"></canvas></canvas>
+        </div>
+      </section>
+    </div>
+    <a class="back" href="#1">We can put a link here....</a>
+  </div>
+</body>
 </html>

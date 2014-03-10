@@ -4,6 +4,59 @@ HScrollbar hs1;
 //int numYears = 10;
 //Year[] years = new Year[numYears];
 Year[] years = {
+  new Year(1889,27,590),
+  new Year(1890,19,607),
+  new Year(1891,21,656),
+  new Year(1892,39,725),
+  new Year(1893,38,744),
+  new Year(1894,53,763),
+  new Year(1895,49,771),
+  new Year(1896,63,791),
+  new Year(1897,64,794),
+  new Year(1898,45,799),
+  new Year(1899,48,801),
+  new Year(1900,40,851),
+  new Year(1901,44,880),
+  new Year(1902,59,992),
+  new Year(1903,23,865),
+  new Year(1904,23,829),
+  new Year(1905,23,651),
+  new Year(1907,12,736),
+  new Year(1908,17,733),
+  new Year(1909,8,794),
+  new Year(1910,10,743),
+  new Year(1911,7,929),
+  new Year(1912,14,934),
+  new Year(1913,12,908),
+  new Year(1914,14,1047),
+  new Year(1915,18,1126),
+  new Year(1916,16,1153),
+  new Year(1917,19,1046),
+  new Year(1918,19,1237),
+  new Year(1919,44,1719),
+  new Year(1920,31,2718),
+  new Year(1921,26,2927),
+  new Year(1922,32,2945),
+  new Year(1923,33,2773),
+  new Year(1924,36,2535),
+  new Year(1925,32,2485),
+  new Year(1926,23,2344),
+  new Year(1927,32,2157),
+  new Year(1927,32,2157),
+  new Year(1927,32,2157),
+  new Year(1927,32,2157),
+  new Year(1931,39,2670),
+  new Year(1932,33,2610),
+  new Year(1933,33,2290),
+  new Year(1934,25,2106),
+  new Year(1935,28,2007),
+  new Year(1936,29,2018),
+  new Year(1937,39,2174),
+  new Year(1938,41,2305),
+  new Year(1939,38,2401),
+  new Year(1940,33,2478),
+  new Year(1941,36,2379),
+  new Year(1942,35,2376),
   new Year(1942, 59, 3055), 
   new Year(2000, 1768, 4300), 
   new Year(2001, 1755, 4258), 
@@ -33,7 +86,7 @@ int canvasHeight, canvasWidth, numRows, numColumns;
 void setup() {
   mimg = loadImage("http://rswang.scripts.mit.edu/das/images/male.png");
   fimg = loadImage("http://rswang.scripts.mit.edu/das/images/female.png");
-  //  mit = loadImage("mit.jpg");
+  mit = loadImage("http://rswang.scripts.mit.edu/das/images/mit.jpg");
   size(650, 500);
   hs1 = new HScrollbar(20, height-50, width-40, 5, 20);
   // for(int i = 0; i <peopfle.length; i++){
@@ -44,15 +97,21 @@ void setup() {
 
 void draw() {
   background(255);
-  // image(mit, 0, 0, 100, 200);
+  int imageWidth = 500;
+  int imageHeight = round(0.8*imageWidth);
+  image(mit, (width-imageWidth)/2, 20, imageWidth, imageHeight);
   unit = float(width)/float(numYears);
-  canvasHeight = height - 200;
-  canvasWidth = canvasHeight*2;
-  numRows = ceil(sqrt(numPersons/2));
-  numColumns = 2*numRows;
+  
+  canvasWidth = imageWidth*0.8;
+  canvasHeight = canvasWidth/2.5;
+  //  numRows = ceil(sqrt(numPersons/2.5));
+  numRows = 8;
+  //  numColumns = 2.5*numRows;
+  numColumns = 25;
   personHeight = canvasHeight/numRows;
-  personWidth = personHeight/2;
-  padding = float(width-canvasWidth)/2;
+  personWidth = personHeight/2.4;
+  int paddingX = float(width-canvasWidth)/2;
+  int paddingY = 165;
   int yi = floor(hs1.getPos()/unit);
 
   Year year = years[yi];
@@ -62,8 +121,8 @@ void draw() {
     numFemales = round(float(year.females)/year.total*200);
   people = new Person[numPersons];
   for (int i = 0; i < people.length; i++) {
-    if (i < numFemales) people[i] = new Person(false, padding+(personWidth*2)*(i%numColumns), 20+(personHeight+5)*floor(i/numColumns)); 
-    else people[i] = new Person(true, padding+(personWidth*2)*(i%numColumns), 20+ (personHeight+5)*floor(i/numColumns)); 
+    if (i < numFemales) people[i] = new Person(false, paddingX+(personWidth*2)*(i%numColumns), paddingY+(personHeight+5)*floor(i/numColumns)); 
+    else people[i] = new Person(true, paddingX+(personWidth*2)*(i%numColumns), paddingY+ (personHeight+5)*floor(i/numColumns)); 
     people[i].display();
   }
   // textSize(32);

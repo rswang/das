@@ -1,9 +1,13 @@
-
-canvas { 
-  display: block; 
-  outline: 0px; 
-  margin-bottom: 1.5em; 
+@font-face {
+font-family: "Quicksand-Regular";
+src: url('fonts/Quicksand-Regular.otf');
 }
+
+@font-face {
+font-family: "Quicksand-Light";
+src: url('fonts/Quicksand-Light.otf');
+}
+
 
 html {
   height: 100%;
@@ -229,11 +233,11 @@ header {
   max-width: 100%;
   z-index: 1;
 }
-
+/*
 .main section.page1 {
   background:rgb(230, 217, 200) url(images/pg1.jpg) no-repeat center;
   background-size: cover;
-}
+}*/
 .main section.page1 h1,h2 {
   text-shadow: 1px 1px #000;
 }
@@ -379,4 +383,46 @@ body.disabled-onepage-scroll .main section.page3 .page_container {
   margin-left: auto;
   margin-right: auto;
   right: 0;
+}
+
+
+
+/* Title page styling */
+.content {
+  font-family: 'Quicksand-Regular';
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+}
+
+#title {
+  font-size: 72px;
+  margin-bottom: 30px;
+  line-height: 60px;
+}
+
+#subtitle {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+#names {
+  font-size: 20px;
+}
+
+/* 2nd Page Styling */
+
+.page2 p.summary {
+  font-family: 'Quicksand-Light';
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase
+}
+
+.page2 p#second {
+  display:none;
+}
+
+.page2 p#third {
+  display: none;
 }
