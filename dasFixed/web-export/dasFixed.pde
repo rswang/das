@@ -1,4 +1,5 @@
 PImage mimg, fimg, mit;
+
 HScrollbar hs1;
 
 //int numYears = 10;
@@ -56,8 +57,63 @@ Year[] years = {
   new Year(1939,38,2401),
   new Year(1940,33,2478),
   new Year(1941,36,2379),
-  new Year(1942,35,2376),
-  new Year(1942, 59, 3055), 
+  new Year(1942,35,2376), 
+  new Year(1944,38,1579), 
+  new Year(1945,34,849), 
+  new Year(1946,32,1538), 
+  new Year(1947,40,3811), 
+  new Year(1948,36,4138), 
+  new Year(1949,30,3831), 
+  new Year(1950,42,3883), 
+  new Year(1951,43,3496), 
+  new Year(1952,57,3154), 
+  new Year(1953,58,3153), 
+  new Year(1954,65,3227), 
+  new Year(1955,70,3481), 
+  new Year(1956,67,3656), 
+  new Year(1957,69,3688), 
+  new Year(1958,63,3664), 
+  new Year(1959,62,3588), 
+  new Year(1960,62,1900), 
+  new Year(1961,78,1310), 
+  new Year(1962,84,1332), 
+  new Year(1963,98,1285), 
+  new Year(1964,119,1264), 
+  new Year(1965,146,1250), 
+  new Year(1966,178,1224), 
+  new Year(1967,200,1307), 
+  new Year(1968,203,1307), 
+  new Year(1969,231,1321), 
+  new Year(1970,259,1231), 
+  new Year(1971,314,4120), 
+  new Year(1972,314,4137), 
+  new Year(973,460,4183), 
+  new Year(1974,603,4137), 
+  new Year(1975,706,4258), 
+  new Year(1976,768,4433), 
+  new Year(1977,815,4468), 
+  new Year(1978,823,4547), 
+  new Year(1979,858,4594), 
+  new Year(1980,900,4517), 
+  new Year(1981,995,4577), 
+  new Year(1982,1093,4562), 
+  new Year(1983,1167,4619), 
+  new Year(1984,1210,4602), 
+  new Year(1985,1281,4536), 
+  new Year(1986,1287,4541), 
+  new Year(1987,1393,4443), 
+  new Year(1988,1496,4377), 
+  new Year(1987,1412,4325), 
+  new Year(1986,1460,4307), 
+  new Year(1985,1451,2593), 
+  new Year(1984,1433,4325), 
+  new Year(1983,1506,4520), 
+  new Year(1982,1528,4509), 
+  new Year(1981,1604,4472), 
+  new Year(1980,1705,4495), 
+  new Year(1979,1749,4429), 
+  new Year(1978,1747,4381), 
+  new Year(1999,1776,4372), 
   new Year(2000, 1768, 4300), 
   new Year(2001, 1755, 4258), 
   new Year(2002, 1765, 4220), 
@@ -72,12 +128,10 @@ Year[] years = {
   new Year(2011, 1948, 4299), 
   new Year(2012, 1963, 4384), 
   new Year(2013, 2038, 4503), 
-  new Year(2013, 2041, 4528)
+  new Year(2014, 2041, 4528)
 };
 int numYears = years.length;
-//Year year1 = new Year(2010, 58, 400);
-
-int numPersons = 100;
+int numPersons = 200;
 int numFemales;
 Person[] people = new Person[numPersons];
 float unit, personWidth, personHeight, padding;
@@ -100,8 +154,9 @@ void draw() {
   int imageWidth = 500;
   int imageHeight = round(0.8*imageWidth);
   image(mit, (width-imageWidth)/2, 20, imageWidth, imageHeight);
-  unit = float(width)/float(numYears);
-  
+  unit = float(width)/(float(numYears)+3);
+  font = createFont("Open Sans",16,true); 
+  textFont(font); 
   canvasWidth = imageWidth*0.8;
   canvasHeight = canvasWidth/2.5;
   //  numRows = ceil(sqrt(numPersons/2.5));
@@ -237,7 +292,7 @@ class HScrollbar {
     ratio = (float)sw / (float)widthtoheight;
     xpos = xp;
     ypos = yp-sheight/2;
-    spos = xpos + swidth/2 - sheight/2;
+    spos = xpos + swidth - sheight/2;
     newspos = spos;
     sposMin = xpos;
     sposMax = xpos + swidth - sheight;

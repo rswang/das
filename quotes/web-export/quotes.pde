@@ -14,10 +14,10 @@ void setup() {
 //  bg = loadImage("pg3.jpg");
   size(1024, 724); 
   background(255,0); 
-  font = createFont("Helvetica",16,true); 
+  font = createFont("Open Sans",16,true); 
   textFont(font); 
   textSize(random(22, 35)); 
-  fill(66, 190, 255); 
+  fill(0,0,0); 
   lastTime = millis(); 
   frameRate(rate); 
 
@@ -42,7 +42,7 @@ void draw()
   ry = random(10, 400); 
   lastTime = millis(); 
 }
-  fill(0, alphaVal); 
+  fill(255, alphaVal); 
   text(quotes[counter], rx, ry, 400, 300); 
   alphaVal += a; 
   

@@ -14,10 +14,10 @@ void setup() {
 //  bg = loadImage("pg3.jpg");
   size(1024, 724); 
   background(255,0); 
-  font = createFont("Helvetica",16,true); 
+  font = createFont("Open Sans",16,true); 
   textFont(font); 
   textSize(random(22, 35)); 
-  fill(66, 190, 255); 
+  fill(0,0,0); 
   lastTime = millis(); 
   frameRate(rate); 
 
@@ -42,7 +42,7 @@ void draw()
   ry = random(10, 400); 
   lastTime = millis(); 
 }
-  fill(0, alphaVal); 
+  fill(255, alphaVal); 
   text(quotes[counter], rx, ry, 400, 300); 
   alphaVal += a; 
   
@@ -51,6 +51,6 @@ void draw()
  } 
 } 
 
-String[] quotes = {"hello", "I like cheese", "what is the answer?", "to life and all", "that crap"};
+String[] quotes = {"During the past year, the number of women attending the Institute has not increased appreciably, but those in attendance continue to make a real contribution to student life.", "Personally, I should like very much to see a women's college here, dedicated to scholarly pursuits for superior women, but I realize that we are not ready to attempt such a project without careful study.", "MIT's founder, William Barton Rogers, envisioned MIT as a place which would 'draw all the lovers of knowledge of both sexes to the halls of the Institute.'" , "to life and all", "that crap"};
   
 

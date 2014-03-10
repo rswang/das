@@ -9,6 +9,12 @@ src: url('fonts/Quicksand-Light.otf');
 }
 
 
+canvas { 
+  display: block; 
+  outline: 0px; 
+  margin-bottom: 1.5em; 
+}
+
 html {
   height: 100%;
 }
@@ -324,7 +330,7 @@ header {
   font-size: 21px;
 }
 .main section.page4 {
-  background:rgb(230, 217, 200) url(quotes/pg3.jpg) no-repeat center;
+  background:rgb(230, 217, 200) url(images/pg3.jpg) no-repeat center;
   background-size: cover;
 }
 .page4 h1, .page4 h2 {
